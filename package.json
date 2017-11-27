@@ -1,0 +1,7 @@
+{
+  "name": "chatastrophe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ronnald Rezende Machado <rrmachado@id.uff.br>",
+  "license": "MIT"
+}
