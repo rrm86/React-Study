@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: [
    'react-hot-loader/patch',
@@ -24,8 +25,13 @@ module.exports = {
       },
     ]
   },
+  // webpack.config.js
   plugins: [
-  new webpack.HotModuleReplacementPlugin()
+  new webpack.HotModuleReplacementPlugin(),
+  new HtmlWebpackPlugin({
+    inject: true,
+    template: __dirname + '/public/index.html',
+  })
 ],
   devServer: {
     contentBase: "./public",
