@@ -49,11 +49,15 @@ module.exports = {
       minifyURLs: true,
     },
   }),
-],
-  devServer: {
-    contentBase: "./public",
-    historyApiFallback: true,
-    inline: true,
-    hot:true
-  }
+  new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false,
+      reduce_vars: false
+    },
+    output: {
+      comments: false
+    },
+    sourceMap: true
+  })
+ ] 
 };
